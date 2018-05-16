@@ -1,0 +1,17 @@
+{
+  "name": "vue-template-api-webpack",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction, and basic express api",
+  "scripts": {
+    "serve": "nodemon app.js",
+    "docs": "cd docs && gitbook serve",
+    "deploy-docs": "bash ./deploy-docs.sh"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "clean-html": "^1.5.0",
+    "express": "4.14.0",
+    "request": "^2.85.0"
+  }
+}
