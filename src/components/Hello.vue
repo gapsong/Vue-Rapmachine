@@ -1,11 +1,7 @@
 <template>
 <div class="panel">
-  <h1>{{ msg }}</h1>
-  <FancyHeader />
+  <h1>Wrapmachine</h1>
   <!-- <button  v-on:click='fetchRhymes("hallo")'> hello </button> -->
-  <RhymeView class="rhyme-box"/>
-  <RhymeView class="rhyme-box"/>
-  <RhymeView class="rhyme-box"/>
   <RhymeView class="rhyme-box"/>
 </div>
 </template>
