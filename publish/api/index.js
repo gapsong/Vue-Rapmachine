@@ -3097,6 +3097,6 @@ router.get('/', function (req, res) {
   ])
 })
 
-router.post('/rhymes', rhymesController.getReimbuchRhymes)
+router.get('/rhymes/:word', rhymesController.getReimbuchRhymes)
 
 module.exports = router

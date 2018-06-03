@@ -37,9 +37,9 @@ var code2ascii = function (string) {
 }
 
 exports.getReimbuchRhymes = function (req, res) {
-  var temp = req.body.word
+  var temp = req.params.word
   temp = umlaut2utf(temp)
-
+  console.log('triggered')
   return request({
     url: 'http://www.reimbuch.net/reim-auf/' + temp
   }, function (error, response, body) {
