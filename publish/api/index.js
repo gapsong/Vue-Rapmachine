@@ -9,6 +9,6 @@ router.get('/', function (req, res) {
 
 router.get('/rhymes/:word', rhymesController.getReimbuchRhymes)
 
-router.get('/getRandomRhymes', rhymesController.getReimbuchRhymes)
+router.get('/randomRhymes', rhymesController.getRandomRhymes)
 
 module.exports = router
