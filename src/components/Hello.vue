@@ -1,29 +1,35 @@
 <template>
 <div>
   <h1>Wrapmachine</h1>
-  <!-- <button  v-on:click='fetchRhymes("hallo")'> hello </button> -->
+  <button  v-on:click='fetchRhymes()'> shuffle </button>
   <div class="wrapper">
-    <RhymeView class="rhyme-box"/>
-    <RhymeView class="rhyme-box"/>
-    <RhymeView class="rhyme-box"/>
+    <RhymeView class="rhyme-box" :rhymes = "randomRhymes[0]" />
+    <RhymeView class="rhyme-box" :rhymes = "randomRhymes[1]" />
+    <RhymeView class="rhyme-box" :rhymes = "randomRhymes[2]" />
   </div>
 </div>
 </template>
 
 <script>
 import RhymeView from './RhymeView'
+import { mapGetters } from 'vuex'
 
 export default {
   components: {
     RhymeView
   },
-  // methods: {
-  //   fetchRhymes (word) {
-  //     this.$store.dispatch('FETCH_RHYMES', word)
-  //   }
-  // },
+  computed: {
+    ...mapGetters({
+      randomRhymes: 'randomRhymes'
+    })
+  },
+  methods: {
+    fetchRhymes () {
+      this.$store.dispatch('FETCH_RANDOM_RHYMES')
+    }
+  },
   created: function () {
-    this.$store.dispatch('FETCH_WORDS')
+    this.$store.dispatch('FETCH_RANDOM_RHYMES')
   }
 }
 </script>

@@ -4,5 +4,8 @@ export default {
   },
   randomWords (state) {
     return state.randomWords
+  },
+  randomRhymes (state) {
+    return state.randomRhymes
   }
 }

@@ -69,7 +69,7 @@ function getRhymes(word) {
 
       // cleans out the html
       return cleaner.clean(temp, options, function(html) {
-        console.log('rhymes:', code2ascii(html))
+        // console.log('rhymes:', code2ascii(html))
         // delete empty strings
         temp = code2ascii(html).split(' ')
         temp = temp.filter((item) => {
@@ -95,6 +95,7 @@ exports.getReimbuchRhymes = function(req, res) {
 exports.getRandomRhymes = function (req, res) {
   var temp = shuffle(rhymes)
   var words = [temp[0], temp[1], temp[2]]
+  console.log(words)
   return Promise.all(words.map((item) => {
     return getRhymes(item)
   })).then((randomRhymes) => {

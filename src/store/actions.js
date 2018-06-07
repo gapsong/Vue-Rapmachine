@@ -21,5 +21,15 @@ export default {
     }).catch(function (ex) {
       console.log('parsing failed', ex)
     })
+  },
+  FETCH_RANDOM_RHYMES (context) {
+    return fetch('/api/randomrhymes')
+    .then(function (response) {
+      return response.json()
+    }).then(function (words) {
+      return context.commit('FETCH_RANDOM_RHYMES', words)
+    }).catch(function (ex) {
+      console.log('parsing failed', ex)
+    })
   }
 }

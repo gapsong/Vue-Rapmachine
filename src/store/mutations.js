@@ -9,5 +9,9 @@ export default {
   FETCH_WORDS: function (state, words) {
     state.randomWords = words
     return state
+  },
+  FETCH_RANDOM_RHYMES: function (state, words) {
+    state.randomRhymes = words
+    return state
   }
 }

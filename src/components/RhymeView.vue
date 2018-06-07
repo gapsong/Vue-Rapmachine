@@ -13,22 +13,8 @@
 </template>
 
 <script>
-import {
-  mapGetters
-} from 'vuex'
-
 export default {
-  computed: {
-    ...mapGetters({
-      randomWords: 'randomWords',
-      rhymes: 'rhymes'
-    })
-  },
-  methods: {
-    fetchRhymes (word) {
-      this.$store.dispatch('FETCH_RHYMES', word)
-    }
-  }
+  props: ['rhymes']
 }
 </script>
 
