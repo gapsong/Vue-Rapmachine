@@ -1,7 +1,7 @@
 <template>
 <div>
   <h1>Wrapmachine</h1>
-  <button  v-on:click='fetchRhymes()'> shuffle </button>
+  <button class="button"  v-on:click='fetchRhymes()'> shuffle </button>
   <div class="wrapper">
     <RhymeView class="rhyme-box" :rhymes = "randomRhymes[0]" />
     <RhymeView class="rhyme-box" :rhymes = "randomRhymes[1]" />
@@ -41,9 +41,15 @@ h2 {
   font-weight: normal;
 }
 
+.button {
+  margin: 25px;
+}
+
 .wrapper{
     display: flex;
-}
+    border-style: dotted;
+    padding: 50px;
+ }
 
 .rhyme-box{
   display: inline-block;

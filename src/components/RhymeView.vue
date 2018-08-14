@@ -1,9 +1,9 @@
 <template>
 <div class="container">
-  <h1>Rhyme on</h1>
+  <h1>Rhyme digga</h1>
   <hr/>
   <div v-for="item of rhymes">
-    {{item}}
+    <h3>{{item}}</h3>
   </div>
   <!-- <h1>Random words</h1>
   <div v-for="item of randomWords">
