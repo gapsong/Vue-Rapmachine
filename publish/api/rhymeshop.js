@@ -3,6 +3,8 @@ var cleaner = require('clean-html')
 var cheerio = require('cheerio')
 var rhymes = require('./rhymes.json')
 
+require('dotenv').load()
+
 var options = {
   'add-remove-tags': [
     'div',
@@ -57,7 +59,7 @@ function getRhymes(word) {
   word = umlaut2utf(word)
 
   return request({
-    uri: 'http://www.reimbuch.net/reim-auf/' + word
+    uri: process.env.URL_LINK + word
   }).then((body) => {
     return new Promise((resolve, reject) => {
       var $ = cheerio.load(body)
